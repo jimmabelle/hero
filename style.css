@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* position: relative and no height */
+ #container {
+  width: 100%;
+  position: relative;
+}
+
+.tablet,
+.mobile {
+  display: none;
+}
+
+.desktop {
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+h1.text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vw;
+}
+
+.text a {
+  text-decoration: none;
+  color: white;
+}
+
+.text a:hover {
+   text-decoration: underline;
+   line-height: 2px;
+}
+
+@media (min-width: 361px) and (max-width: 720px) {
+  .mobile, .desktop { display: none; }
+  .tablet { display: block; }
+}
+
+@media (max-width: 360px)  {
+  .tablet, .desktop { display: none; }
+  .mobile { display: block; }
+}
